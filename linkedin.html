@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                
+            }
+            body{
+                background-color:#f0f0f0;
+                padding-bottom: 300px;
+            }
+            p{
+                margin:0;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+
+            .logo{
+                height:40px;
+            }
+
+            .home,.group,.chat,.chat,.user{
+                height:20px;
+              
+                
+            }
+            .header{
+                display: flex;
+                flex-direction: row;
+                column-gap: 10px;
+                justify-content: space-between;
+                margin-left: 150px;
+                margin-right: 150px;
+                background-color: white;
+                align-items: middle;
+            }
+            .search{
+                background-color: rgb(247, 247, 247);
+                border:none;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 5px;
+                padding-right: 5px;
+                border-radius: 3px;
+                width: 500px;
+                margin: left 4px;
+                
+                
+            }
+            .content{
+                background-color: #f0f0f0;
+            }
+            .icons{
+                display: flex;
+                flex-direction: row;
+                column-gap: 15px;
+                align-items: middle;
+            }
+            .upheader{
+                background-color: white;
+                margin-top: 0;
+                margin-left: 0;
+                margin-bottom: 0;
+                margin-right: 0;
+                padding-top: 10px;
+                border-bottom: 1px;
+                border-color: black;
+                border-style: solid;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+
+            }
+
+            .content{
+                display: flex;
+                flex-direction: row;
+                margin-left: 150px;
+                margin-right: 150px;
+                padding-top: 15px;
+                column-gap: 15px;
+                
+            }
+            .coverpic{
+                width: 800px;
+                height:150px;
+                border-radius: 5px 5px 0px 0px;
+                object-fit: cover;
+                position: relative;
+                top:0;
+                left:0;
+            }
+            .profile{
+                border: 1px;
+                border-radius: 5px;
+                border-color: black;
+                background-color: white;
+                
+            }
+
+            .profilepic{
+                position: absolute;
+                top:170px;
+                left:180px;
+                width:100px;
+                border-radius: 50px;
+                
+            }
+
+            .name{
+                margin-top: 50px;
+                padding-left: 30px;
+                font-size: larger;
+                font-weight: bold;
+            }
+
+            .namebelow{
+                padding-left: 30px;
+                color:gray;
+
+            }
+
+            .address{
+                padding-left: 30px;
+                margin-top: 0;
+                color:gray;
+                font-size: smaller;
+            }
+            
+            .friendpic{
+                width:30px;
+                position: absolute;
+                left:180px;
+                margin-top: 10px;
+                border-radius: 15px;
+            }
+
+            .mutual-friends{
+                padding-left: 65px;
+                margin-top: 15px;
+                color: gray;
+            }
+
+            .buttonc{
+                background-color: rgb(24, 119, 242);
+                border:none;
+                color:white;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                border-radius: 4px;
+                font-size: 16px;
+                margin-right:0;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                vertical-align: middle;
+                cursor: pointer;
+                margin-left: 30px;
+            }
+
+            .visitbutton{
+                /* background-color: rgb(24, 119, 242); */
+                
+                color:gray;
+                border-color: gray;
+                border-style:solid;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 20px;
+                padding-right: 20px;
+                border-radius: 4px;
+                font-size: 16px;
+                margin-left: 5px;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                vertical-align: middle;
+                cursor: pointer;
+                margin-left:10px;
+            }
+
+            .line{
+                color: gray;
+            }
+
+            .menuprofile{
+                display: flex;
+                flex-direction: row;
+                align-items: justify;
+                column-gap: 20px;
+                padding-left: 30px;
+                padding-bottom: 15px;
+                color: rgb(111, 109, 109);
+                padding-top: 5px;
+                font-size: larger;
+                font-weight:400px;
+                
+            }
+
+            .visitlogo{
+                width:15px;
+                text-align: middle;
+                margin-left: 5px;
+
+            }
+            .left{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .secondleftfor{
+                width:770px;
+                color: gray;
+                font-size: smaller;
+                padding-bottom: 10px;
+                padding-left: 30px;
+            }
+
+            .secondleft,.thirdleft,.forthleft{
+                background-color: white;
+                border-radius: 5px;
+                margin-top:10px;                
+            }
+
+            .forthleft{
+                font-family:Arial, Helvetica, sans-serif;
+                margin-top:0;
+                margin-bottom: 0;
+                vertical-align: middle;
+                margin-top: 20px;
+                padding-left: 30px;
+                padding-bottom: 20px;
+            }
+
+            .thirdtext{
+                padding-top: 5px;
+            }
+
+            .thirdlogo{
+                position: absolute;
+                padding-left: 30px;
+                padding-top: 5px;
+                
+            }
+
+            .whole{
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+                display: inline-block;
+                margin-right:15px;
+                vertical-align: middle;
+            }
+            .profilepicdog{
+                display: inline-block;
+                vertical-align: middle;
+                vertical-align: middle;
+                padding-left: 8px;
+            }
+            .mutual{
+                display:inline-block;
+            }
+            .catpic{
+                width: 300px;
+                
+            }
+            .dogpic{
+                width:40px;
+                height: 40px;
+                border-radius:100%;
+                object-fit: cover;
+            }
+            .nameform{
+                font-size:20px;
+                font-weight: bold;
+                padding-left: 8px;
+            }
+            .nameinfo{
+                margin-top: 6px;
+                margin-bottom:3px ;            
+            }
+            .mutual{
+                vertical-align: middle;
+                display: inline-block;
+                margin-bottom: 0;
+                
+            }
+            .textmutual{
+                text-align: top;
+                color: rgb(100, 100, 100);
+                margin-left:3px;
+                vertical-align: middle;
+                
+                font-size:20px
+
+            }
+            .buttoncat{
+                background-color: rgb(24, 119, 242);
+                border:none;
+                color:white;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                border-radius: 4px;
+                font-size: 16px;
+                margin-left: 8px;
+                margin-bottom: 10px;
+                margin-top: 5px;
+                vertical-align: middle;
+                cursor: pointer;
+
+
+            }
+            .buttonh{
+                margin-top: 0;
+            }
+            .mutualpic{
+                padding-bottom: 0;
+                margin-bottom: 0;
+                vertical-align: middle;
+            }
+
+            .pages{
+                background-color:white;
+                border-radius: 5px;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="upheader">
+            <div class="header">
+                <div class="logodiv">
+                    <img src="./mylogo.jpg" class="logo">
+                </div>
+                <div class="searchbar">
+                    <input type="text" placeholder="Search" class="search">
+                </div>
+                <div class="icons">
+                    <div>
+                    <img class= "home"src="./house-solid.svg">
+                    </div>
+                    <div>
+                    <img class="group" src="./user-group-solid.svg">
+                    </div>
+                    <div>
+                    <img class="chat" src="./rocketchat-brands.svg">
+                    </div>
+                    <div>
+                    <img class="chat" src="./bell-solid.svg">
+                    </div>
+                    <div>
+                    <img class="user" src="./user-solid.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="left">
+                <div class="profile">
+                    <img src="./cover.jpg" class="coverpic">
+                    <img src="./profilepic.jpg" class="profilepic">
+                    <p class="name">
+                        Ravinder Sharma
+                    </p>
+                    <p class="namebelow">
+                        The world’s most popular app for meeting new people.
+                    </p>
+                    <p class="address">
+                        Internet Publishing Los Angeles, California 86,971 followers
+                    </p>
+                    <img src="./friendprofilepic.jpg" class="friendpic">
+                    <p class="mutual-friends">
+                        You have 1 mutual friend 
+                    </p>
+                    <button class="buttonc">Add friend</button>
+                    <button class="visitbutton">Visit Website <img src="./visitbutton.svg" class="visitlogo"></button>
+                    <hr style="height:0.5px;border-width:0;color:rgb(188, 187, 187);background-color:rgb(188, 184, 184)">
+                    <div class="menuprofile">
+                        <div>
+                            <p>Home</p>
+                        </div>
+                        <div>
+                            <p>About</p>
+                        </div>
+                        <div>
+                            <p>Posts</p>
+                        </div>
+                        <div>
+                            <p>Relationship Status</p>
+                        </div>
+                        <div>
+                            <p>Skills</p>
+                        </div>
+                        <div>
+                            <p>Friends</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="secondleft">
+                    <p style="
+                        font-weight: bold;
+                        font-size: 25px;
+                        margin-bottom: 6px;
+                        padding-left: 30px;
+                        padding-top: 5px;
+                    ">
+                        About
+                    </p>
+                    <p class="secondleftfor">
+                        As humans, there are few things more exciting than meeting someone new. At Tinder, we’re inspired by the challenge of keeping the magic of human 
+                        connection alive. With tens of millions of users, hundreds of millions of downloads, 2+ billion swipes per day, 
+                        20+ million matches per day and a presence in 190+ countries, our reach is expansive—and rapidly growing
+                    </p>
+                    <hr style="height:0.5px;border-width:0;color:rgb(188, 187, 187);background-color:rgb(188, 184, 184);" >
+                    <p style="
+                    text-align: center; 
+                    font-size: larger;
+                    padding-bottom: 5px;
+                    color: gray;
+                    font-weight: 500;
+                    ">
+                        See all details
+                    </p>
+                </div>
+                <div class="thirdleft">
+                    <div class="thirdlogo">
+                        <img src="./studentlogo.svg" style="width:50px" >
+                    </div>
+                    <div class="thirdtext">
+                        <p style="padding-left:85px;font-weight:bold;font-size:25px;">Student</p>
+                        
+                        <p style="padding-left:85px;color:gray;">
+                            at Indian Institute of Technology Bhilai
+                        </p>
+                        <p style="padding-left:85px;color:gray;">
+                            intern at Joe
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="forthleft">
+                    <p style="font-weight: bold;
+                                font-size: 25px;
+                                margin-top: 5px;
+                                margin-bottom: 5px;">
+                        People you may know:
+                    </p>
+                    <div class="whole">
+                        <div class="image">
+                            <img src="./adi.jpg" class="catpic">
+                        </div>
+                        <div class="nameinfo">
+                            <p class="nameform">
+                                Aditya Sharma
+                            </p>
+                        </div>
+                        <div class="mutualpic">
+                            <div class="profilepicdog">
+                                <img src="./dog2.jpg" class="dogpic">
+                            </div>
+                            <div class="mutual">
+                                <p class="textmutual">
+                                    2 mutual friends
+                                </p>
+                            </div>
+                        </div>
+                        <div class="buttonh">
+                            <button class="buttoncat">Add friend</button>
+                        </div>
+                    </div>
+                    <!-- ----- -->
+                    <div class="whole">
+                        <div class="image">
+                            <img src="./atharva.jpg" class="catpic">
+                        </div>
+                        <div class="nameinfo">
+                            <p class="nameform">
+                                Atharva Bhattnagar
+                            </p>
+                        </div>
+                        <div class="mutualpic">
+                            <div class="profilepicdog">
+                                <img src="./dog2.jpg" class="dogpic">
+                            </div>
+                            <div class="mutual">
+                                <p class="textmutual">
+                                    2 mutual friends
+                                </p>
+                            </div>
+                        </div>
+                        <div class="buttonh">
+                            <button class="buttoncat">Add friend</button>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            
+            <div class="right">
+                <div class="pages">
+                    <p style="font-weight:bold;font-size: 25px;padding-right: 40px;padding-left: 5px;padding-bottom: 5px;">
+                        Social Media Links
+                    </p>
+                    
+                    <p>
+                        <img src="./instagram-brands.svg" style="width:25px;padding-left: 5px;position:absolute;"><a href="https://instagram.com/chief_ravinder/" style="text-decoration:none;color:black;padding-left:30px;">Instagram</a>
+                    </p>
+                    <img src="./facebook-brands.svg" style="width:25px;padding-left: 5px;position:absolute;"><a href="https://instagram.com/chief_ravinder/" style="text-decoration:none;color:black;padding-left:30px;">Facebook</a>
+                </div>
+                <div class="about">
+                    
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
